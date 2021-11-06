@@ -1,0 +1,59 @@
+@import 'fonts';
+
+$base_size:16;
+$blue:#5474fd;
+
+
+
+
+@mixin fz($px_size) {
+    font-size: ($px_size/$base_size)+rem;
+}
+
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+body {
+    font-size: 1rem;
+    min-width: 350px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.aleo-font {
+    font-family: "Aleo", serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
