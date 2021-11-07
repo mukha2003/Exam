@@ -66,13 +66,15 @@
         <section class="choose">
             <div class="choose__content container">
                 <div class="choose__text">
-                    <h2 class="choose__title">
+                    <h2 class="choose__title title-cmn">
                         Why Choose Us
                     </h2>
-                    <p class="choose__descr">Tion and dislike men who are so beguiled and demoralized by desire by the
+                    <p class="choose__descr descr-cmn">Tion and dislike men who are so beguiled and demoralized by
+                        desire by the
                         charms of pleasure of the moment, so blinded by desire, that they cannot foresee
                     </p>
-                    <p class="choose__descr">Ddislike men who are so beguiled and demoralized by the charms of pleasure
+                    <p class="choose__descr descr-cmn">Ddislike men who are so beguiled and demoralized by the charms of
+                        pleasure
                         of the moment, so blinded by desire, that.
                     </p>
                     <button type="button" class="choose__btn btn">
@@ -80,8 +82,12 @@
                     </button>
                 </div>
                 <div class="choose__pics">
-                    <img src="assets/images/house-1.png" alt="house">
-                    <img src="assets/images/mountain-1.png" alt="mountains">
+                    <div class="choose__img">
+                        <img src="assets/images/house-1.jpg" alt="house">
+                    </div>
+                    <div class="choose__img">
+                        <img src="assets/images/mountain-1.jpg" alt="mountains">
+                    </div>
                 </div>
             </div>
         </section>
@@ -89,34 +95,46 @@
         <!-- icon block -->
         <div class="icon-block">
             <div class="container">
+                <div class="arch-block">
+                    <div class="arch">
+                        <svg class="arch-1">
+                            <use xlink:href="assets/svg/sprite.svg#arc"></use>
+                        </svg>
+                    </div>
+                    <div class="arch">
+                        <svg class="arch-2">
+                            <use xlink:href="assets/svg/sprite.svg#arc"></use>
+                        </svg>
+                    </div>
+                </div>
                 <ul class="icon-block__list">
                     <li class="icon-block__item">
                         <div class="icon-block__icon">
-                            <svg>
+                            <svg class="dblue">
                                 <use xlink:href="assets/svg/sprite.svg#search"></use>
                             </svg>
                         </div>
-                        <div class="icon-block__text">
+                        <div class="icon-block__text title-cmn">
                             Search Places
                         </div>
                     </li>
                     <li class="icon-block__item">
                         <div class="icon-block__icon">
-                            <svg>
+                            <svg class="red">
                                 <use xlink:href="assets/svg/sprite.svg#check"></use>
                             </svg>
                         </div>
-                        <div class="icon-block__text">
+                        <div class="icon-block__text title-cmn">
                             Select Places
                         </div>
                     </li>
                     <li class="icon-block__item">
                         <div class="icon-block__icon">
-                            <svg>
+                            <svg class="lblue">
                                 <use xlink:href="assets/svg/sprite.svg#like"></use>
                             </svg>
                         </div>
-                        <div class="icon-block__text">
+                        <div class="icon-block__text title-cmn">
                             Book & Enjoy
                         </div>
                     </li>
@@ -125,7 +143,7 @@
         </div>
 
         <section class="hotel">
-            <div class="container">
+            <div class="container hotel__wrap">
                 <div class="hotel__card card">
                     <div class="card__name">
                         Spain
@@ -133,7 +151,7 @@
                     <h3 class="card__title">
                         Grand Spain Madrid
                     </h3>
-                    <p class="card__descr">
+                    <p class="card__descr descr-cmn">
                         But I must explain to you how all this mistaken idea of account to denouncing pleasure and
                         praising pain was account born and I account will give you a complete account of the system
                     </p>
@@ -145,7 +163,7 @@
         </section>
 
         <section class="view">
-            <div class="container">
+            <div class="container view__wrap">
                 <div class="view__card card">
                     <div class="card__name">
                         Spain
@@ -153,7 +171,7 @@
                     <h3 class="card__title">
                         Grand Spain Madrid
                     </h3>
-                    <p class="card__descr">
+                    <p class="card__descr descr-cmn">
                         But I must explain to you how all this mistaken idea of account to denouncing pleasure and
                         praising pain was account born and I account will give you a complete account of the system
                     </p>
@@ -166,11 +184,13 @@
         <section class="review">
             <div class="container">
                 <div class="review__content">
-                    <h2 class="review__title">
+                    <h2 class="review__title title-cmn">
                         What Our Tourist Say
                     </h2>
                     <div class="review__card">
-                        <img class="review__img" src="assets/images/footer-img.png" alt="man">
+                        <div class="review__img">
+                            <img src="assets/images/footer-img.jpg" alt="man looking forward">
+                        </div>
                         <div class="review__text">
                             <div class="review__name">
                                 Sam Sumon
