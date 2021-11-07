@@ -24,7 +24,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-quote-left:before {
+  content: "\f10d";
+}
 .icon-facebook1:before {
   content: "\ea90";
 }

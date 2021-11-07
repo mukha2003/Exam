@@ -1,0 +1,9 @@
+@media screen and (max-width: 900px) {
+  #hamburger_menu {
+    display: block;
+  }
+
+  .nav__menu {
+    display: none;
+  }
+}

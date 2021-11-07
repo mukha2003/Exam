@@ -1,3 +1,13 @@
 @media screen and (max-width:1200px) {
  
 }
+
+@media screen and (max-width:900px) {
+    #hamburger_menu {
+        display: block;
+    }
+
+    .nav__menu {
+        display: none;
+    }
+}

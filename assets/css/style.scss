@@ -1,4 +1,5 @@
 @import 'fonts';
+@import "hamburger.scss";
 
 $base_size:16;
 $mainb:#5474fd;
@@ -60,17 +61,87 @@ body {
     margin: 0 auto;
 }
 
+//  Hamburger 
+#page-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    backdrop-filter: blur(3px);
+}
+
+#mobile-menu-wrap {
+    position: fixed;
+    background-color: #777676;
+    height: 100vh;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    max-width: 425px;
+    transition: all 0.6s ease;
+    z-index: 1000;
+    &.top {
+        max-width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+  .sidemenu-top {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color:$mainb;
+  }
+  .sidemenu {
+      li {
+          border-bottom: 1px solid $mainb;
+      }
+      a {
+        display: inline-block;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: 400;
+        text-transform: uppercase;
+        width: 100%;
+        color: #fff;
+      }
+  }
+  .open {
+    #page-overlay {
+      display: block;
+    }
+  
+    #mobile-menu-wrap {
+      left: 0;
+    }
+  }
+
+// header 
 .header {
     &__content {
-        background-image: url(../images/header-bg.jpg);
+        background-color: #0485c1;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        box-shadow:inset 0 0 0 2000px rgba(18, 18, 18, 0.2);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 265px 0 154px;
+        box-shadow:inset 0 0 0 2000px rgba(18, 18, 18, 0.2);                
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 650px;
+            padding: 265px 0 154px;
+        }
     }
     &__title {
         margin-bottom: 15px;
@@ -103,12 +174,17 @@ body {
         }
     }  
 }
+
+#hamburger_menu {
+    display: none;
+}
+
 .search {
     &__form {
         display: flex;
     }
 
-    &__input {  
+    &__input {      
         input {     
             width: 500px;
             height: 60px; 
@@ -148,19 +224,15 @@ body {
 }
 .nav {
     background-color: $mainb;   
-    // position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 80px;
     z-index: 10;
-    transition: all .3 ease;
+    transition: all .3s ease;
     .container {
         display: flex;
         height: 100%;
         align-items: center;
-        justify-content: space-between;
-        
+        justify-content: space-between;       
     }
     &__list {
         display: flex;
@@ -203,8 +275,15 @@ body {
     }
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  // chooose
 .choose {
-    background-image: url(../images/bg-1.jpg);
+    background-color: #956434;
     background-size: cover;
     background-position: 20% center;
     background-repeat: no-repeat;
@@ -225,6 +304,11 @@ body {
     }
     &__img {
         margin-bottom: 5px;
+        width: 73%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
     }
     &__img:last-child {
         align-self: flex-end;
@@ -296,14 +380,34 @@ body {
     &__list {
         display: flex;
     }
-    &__item {
+    &__item {       
+        width: 33.3333%;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover .icon-block__text {
+            &--dblue {
+            color: $mainb;
+            }
+            &--red {
+                color: #ff6363;
+            }
+            &--lblue {
+                color: #0793e4;
+            }
+        }
+        &:hover .icon-block__icon {
+            transform: rotateY(360deg);
+        }
+    }
+    &__link {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 33.3333%;
     }
     &__icon {
         margin-bottom: 18px;
+        transition: all .3s ease;
         svg {
             width: 70px;
             height: 70px;
@@ -340,7 +444,7 @@ body {
 }
 
 .hotel {
-    background-image: url(../images/bg-2.jpg);
+    background-color: #615887;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -370,9 +474,9 @@ body {
 }
 
 .view {
-    background-image: url(../images/bg-3.jpg);
+    background-color: #d0502c;
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     &__wrap {
         display: flex;
@@ -380,5 +484,88 @@ body {
         justify-content: flex-end;
     }
 }
+
+.review {
+    background-color: #252627;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 2000px rgba(35, 35, 35, 0.9);
+    padding: 120px 0 200px;
+    
+    &__title {
+        text-align: center;
+        margin-bottom: 90px;
+    
+    }
+    &__card {
+        display: flex;
+        background-color: #333;
+    }
+
+    &__img {
+        width: 40%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+    }
+    &__text {
+        width: 60%;      
+        padding: 50px 54px 0;
+    }
+
+    &__name {
+        @include fz(20);
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    &__descr {
+        text-indent: 30px;
+        letter-spacing: -1px;
+        position: relative;
+        &::before {
+            font-family: 'icomoon';
+            content: "\f10d";
+            position: absolute;
+            left: -27px;
+            top: -15px;
+            @include fz(18);
+            color: $mainb;
+        }
+    }
+}
+
+.footer {
+    background-color: #232323;
+    padding: 120px 0 50px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo {
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        margin-bottom: 20px;
+    }
+}
+.social {
+    display: flex;
+    // gap: 20px;
+    &__link {
+        padding: 10px 11px;
+        display: inline-block;
+        transition: all .3s ease;
+        &:hover {
+            color: $mainb;
+            transform: scale(1.4);
+        }
+    }
+}
+
 
 

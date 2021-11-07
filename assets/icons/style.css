@@ -21,6 +21,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-quote-left:before {
+  content: "";
+}
+
 .icon-facebook1:before {
   content: "";
 }
