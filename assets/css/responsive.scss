@@ -1,13 +1,282 @@
-@media screen and (max-width:1200px) {
- 
+$base_size:16;
+@mixin fz($px_size) {
+    font-size: ($px_size/$base_size)+rem;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1200px) {
+    .header {
+        &__content {
+            .container {
+                padding: 20% 0 10%;
+            }
+        }
+        &__search {
+            margin-bottom: 160px;
+        }
+    }  
+    
+    .choose {
+        padding: 80px 0;
+    } 
+    .sticky {
+        & + main>.choose {
+            padding-top: 160px;
+        }
+    }
+    .icon-block {
+        padding: 9% 0 8%;
+    }
+    .hotel__wrap, .view__wrap {
+        padding: 17% 0 100px;
+    }
+    .review {
+        &__text {
+            padding: 30px 20px 0;
+        }
+    }
+    .footer {
+        padding: 8% 0 50px;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .choose__text {
+        padding: 20px 0 0 0;
+    }
+    .arc:before,
+    .arc:after {
+    top: -53%;
+    }
+    .review {
+        &__text {
+            padding: 15px 15px 0;
+        }
+        &__name {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:920px) {
     #hamburger_menu {
         display: block;
     }
-
     .nav__menu {
         display: none;
     }
+    .choose__text {
+        padding: 0;
+    }
+    .review {
+        padding: 8% 0 10%;
+        .descr-cmn {
+            line-height: 1.3rem;
+        }
+    }
+    .footer__subtitle {
+        margin-bottom: 15px;
+    }
+    .social__link {
+            padding: 13px 13px;
+    }
 }
+
+@media screen and (max-width:830px) {
+    .search {
+        &__input {
+            input {
+                width: 400px;
+                height: 55px;
+                padding-left: 80px;
+            }
+        }
+        &__btn {
+            width: 120px;
+            height: 55px;
+            padding-left: 5px;
+        }
+    }
+
+    .choose {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__text {
+            width: 55%;
+        }
+        &__descr.descr-cmn {
+            line-height: 1.55rem;
+        }
+    }
+
+    .title-cmn {
+        @include fz(30);
+    }
+
+    .icon-block {
+        &__icon {
+            margin-bottom: 15px;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &__text.title-cmn {
+                @include fz(24);
+        }
+    }    
+
+    .review {
+        padding: 8% 0 9%;
+        &__card {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            width: 70%;
+        }
+        &__title {
+            margin-bottom: 5%;
+        }
+        &__img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__text {
+            width: 100%;      
+        }
+        &__name {
+            margin-bottom: 20px;
+        }
+        &__descr {
+            padding-bottom: 20px;
+        &__descr.descr-cmn {
+            line-height: 1.75rem;
+        }   
+        }
+    }    
+}
+
+@media screen and (max-width:650px) {
+    .header {
+        &__content {
+            .container {
+                padding: 30% 0 10%;
+            }
+        }
+        &__search {
+            margin-bottom: 160px;
+        }
+    }
+    .search {
+        &__input {
+            input {
+                width: 250px;
+                height: 55px;
+                padding-left: 20px;
+                letter-spacing: normal;
+                @include fz(16);
+            }
+        }
+        &__btn {
+            width: 60px;
+            height: 55px;
+            padding-left: 5px;
+        }
+        .btn-search {
+            display: none;
+        }
+        &__icon {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    .header__subtitle {
+        letter-spacing: 3.3px;
+    }
+    .choose {
+        padding: 0 0;
+        &__content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+        }
+        &__text {
+            width: 100%;
+            padding: 60px 0 0 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-bottom: 40px;
+        }
+        &__pics {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 5%;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+        }  
+    }
+    .sticky {
+        & + main>.choose {
+            padding-top: 80px;
+        }
+    }
+    .review {
+        padding: 8% 0 9%;
+        &__card {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            width: 100%;
+        }
+    }
+    .arc:before,
+    .arc:after {
+    top: -40%;
+    }
+    .icon-block {
+        &__icon {
+            margin-bottom: 15px;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &__text.title-cmn {
+                @include fz(16);
+        }
+    } 
+} 
+
+  

@@ -31,6 +31,8 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
+    <!-- Scema -->
+
     <link rel="stylesheet" href="assets/icons/style.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/responsive.min.css">
@@ -79,7 +81,7 @@
                         <div class="search__input">
                             <input type="text" name="search" placeholder="Search Your Travel Destination">
                         </div>
-                        <button type="submit" class="search__btn">search
+                        <button type="submit" class="search__btn"><span class="btn-search">search</span>
                             <span class="search__icon">
                                 <svg>
                                     <use xlink:href="assets/svg/sprite.svg#search"></use>
@@ -93,31 +95,32 @@
                 </div>
             </div>
         </div>
-        <div class="nav" id="nav-menu">
-            <div class="container">
-                <div class="nav__logo">
-                    <a href="#" target="_blank">
-                        <img src="assets/images/menu-logo.png" alt="logo">
-                    </a>
-                </div>
-                <nav class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a class="nav__link" href="#">Who We Are</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#">What We Do</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#">Travel With Us</a></li>
-                        <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div id="hamburger_menu">
-                    <button class="hamburger hamburger--collapse" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
+    </header>
+    <!-- есть сомнения, по поводу nav не в хедере, но я читала, что это не принципиально-->
+    <nav class="nav" id="nav-menu">
+        <div class="container">
+            <div class="nav__logo">
+                <a href="#" target="_blank">
+                    <img src="assets/images/menu-logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Who We Are</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">What We Do</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Travel With Us</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="hamburger_menu">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- first section -->
     <main>
@@ -131,7 +134,8 @@
                         desire by the
                         charms of pleasure of the moment, so blinded by desire, that they cannot foresee
                     </p>
-                    <p class="choose__descr descr-cmn">Ddislike men who are so beguiled and demoralized by the charms of
+                    <p class="choose__descr descr-cmn">Ddislike men who are so beguiled and demoralized by the
+                        charms of
                         pleasure
                         of the moment, so blinded by desire, that.
                     </p>
@@ -155,18 +159,6 @@
         <!-- icon block -->
         <div class="icon-block">
             <div class="container">
-                <div class="arch-block">
-                    <div class="arch">
-                        <svg class="arch-1">
-                            <use xlink:href="assets/svg/sprite.svg#arc"></use>
-                        </svg>
-                    </div>
-                    <div class="arch">
-                        <svg class="arch-2">
-                            <use xlink:href="assets/svg/sprite.svg#arc"></use>
-                        </svg>
-                    </div>
-                </div>
                 <ul class="icon-block__list">
                     <li class="icon-block__item">
                         <a href="#" class="icon-block__link" target="_blank">
@@ -180,7 +172,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="icon-block__item">
+                    <li class="icon-block__item arc">
                         <a href="#" class="icon-block__link" target="_blank">
                             <div class="icon-block__icon">
                                 <svg class="red">
@@ -265,10 +257,12 @@
                                 Sam Sumon
                             </div>
                             <blockquote class="review__descr descr-cmn">
-                                But I must explain to you how all this mistaken idea of account to denouncinpleasure and
+                                But I must explain to you how all this mistaken idea of account to denouncinpleasure
+                                and
                                 praising pain But I must explain to you how all this mistaken idea of account to nai
                                 denouncing pleasure and praising pain was account born and I account will give you a
-                                complete account of the system was account born and I account will give you a nai the
+                                complete account of the system was account born and I account will give you a nai
+                                the
                                 complete account of the system
                             </blockquote>
                         </div>
@@ -286,19 +280,19 @@
                 Safe Travel Anywhere
             </div>
             <ul class="footer__list social">
-                <li class="social__item"><a class="social__link" href="#" rel="nofollow" target="_blank"><i
-                            class="icon-facebook1"></i></a></li>
-                <li class="social__item"><a class="social__link" href="#" rel="nofollow" target="_blank"><i
-                            class="icon-twitter1"></i></a>
+                <li class="social__item"><a class="social__link" href="https://www.facebook.com" rel="nofollow"
+                        target="_blank"><i class="icon-facebook1"></i></a></li>
+                <li class="social__item"><a class="social__link" href="https://www.twitter.com" rel="nofollow"
+                        target="_blank"><i class="icon-twitter1"></i></a>
                 </li>
-                <li class="social__item"><a class="social__link" href="#" rel="nofollow" target="_blank"><i
-                            class="icon-linkedin2"></i></a>
+                <li class="social__item"><a class="social__link" href="https://www.linkedin.com" rel="nofollow"
+                        target="_blank"><i class="icon-linkedin2"></i></a>
                 </li>
-                <li class="social__item"><a class="social__link" href="#" rel="nofollow" target="_blank"><i
-                            class="icon-youtube"></i></a>
+                <li class="social__item"><a class="social__link" href="https://www.youtube.com" rel="nofollow"
+                        target="_blank"><i class="icon-youtube"></i></a>
                 </li>
-                <li class="social__item"><a class="social__link" href="#" rel="nofollow" target="_blank"><i
-                            class="icon-pinterest"></i></a>
+                <li class="social__item"><a class="social__link" href="https://www.pinterest.com" rel="nofollow"
+                        target="_blank"><i class="icon-pinterest"></i></a>
                 </li>
             </ul>
         </div>
