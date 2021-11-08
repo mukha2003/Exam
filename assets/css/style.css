@@ -321,8 +321,8 @@ body {
   letter-spacing: 2.2px;
 }
 .search__input input:focus {
-  border: none;
-  outline: 2px inset #5474fd;
+  border: 1px solid #5474fd;
+  outline: 2px inset #fff;
 }
 .search__btn {
   width: 150px;

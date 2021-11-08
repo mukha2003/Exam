@@ -199,6 +199,10 @@ $base_size:16;
             margin-left: 0;
         }
     }
+    .arc:before,
+    .arc:after {
+    top: -40%;
+    }
 }
 
 @media screen and (max-width:550px) {
@@ -263,7 +267,7 @@ $base_size:16;
     }
     .arc:before,
     .arc:after {
-    top: -40%;
+    top: -45%;
     }
     .icon-block {
         &__icon {

@@ -208,8 +208,8 @@ body {
             padding-left: 126px;
             letter-spacing: 2.2px;
             &:focus {
-                border: none;
-                outline: 2px inset $mainb;
+                border: 1px solid $mainb;
+                outline: 2px inset #fff;
             }
         }     
     }
