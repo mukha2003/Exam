@@ -159,6 +159,12 @@ a, input, button {
   cursor: pointer;
 }
 
+button,
+input {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   vertical-align: top;
 }
@@ -320,6 +326,7 @@ body {
   border-radius: 0;
   padding-left: 126px;
   letter-spacing: 2.2px;
+  -webkit-appearance: none;
 }
 .search__input input:focus {
   border: 1px solid #5474fd;

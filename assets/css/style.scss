@@ -37,6 +37,12 @@ a, input, button {
     cursor: pointer;
 }
 
+button,
+input {
+  margin: 0;
+  padding: 0;
+}
+
 img {
     vertical-align: top;
 }
@@ -208,6 +214,7 @@ body {
             border-radius: 0;
             padding-left: 126px;
             letter-spacing: 2.2px;
+            -webkit-appearance: none;
             &:focus {
                 border: 1px solid $mainb;
                 outline: 2px inset #fff;
