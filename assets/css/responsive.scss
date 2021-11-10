@@ -255,6 +255,14 @@ $base_size:16;
             padding-top: 80px;
         }
     }
+
+    .card {
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
     .review {
         padding: 8% 0 9%;
         &__card {
