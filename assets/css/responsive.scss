@@ -291,4 +291,10 @@ $base_size:16;
     } 
 } 
 
+@media screen and (max-width:450px) {
+    .choose__pics {
+        flex-direction: column;
+    }
+}
+
   
